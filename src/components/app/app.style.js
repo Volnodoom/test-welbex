@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 import InterRegular from 'assets/fonts/inter-regular.woff';
 import InterRegularWoff2 from 'assets/fonts/inter-regular.woff2';
 import InterBold from 'assets/fonts/inter-bold.woff';
@@ -7,6 +7,10 @@ import InterBlack from 'assets/fonts/inter-black.woff';
 import InterBlackWoff2 from 'assets/fonts/inter-black.woff2';
 import InterMedium from 'assets/fonts/inter-medium.woff';
 import InterMediumWoff2 from 'assets/fonts/inter-medium.woff2';
+import MontserratRegular from 'assets/fonts/montserrat-regular.woff';
+import MontserratRegularWoff2 from 'assets/fonts/montserrat-regular.woff2';
+import MontserratLight from 'assets/fonts/montserrat-light.woff';
+import MontserratLightWoff2 from 'assets/fonts/montserrat-light.woff2';
 
 const GlobalStyle = createGlobalStyle`
 @font-face {
@@ -43,6 +47,24 @@ const GlobalStyle = createGlobalStyle`
   src:  local('Inter'),
         url(${InterBlackWoff2}) format('woff2'),
         url(${InterBlack}) format('woff');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 300;
+  src:  local('Inter'),
+        url(${MontserratLightWoff2}) format('woff2'),
+        url(${MontserratLight}) format('woff');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src:  local('Inter'),
+        url(${MontserratRegularWoff2}) format('woff2'),
+        url(${MontserratRegular}) format('woff');
 }
 
 *,
@@ -159,7 +181,15 @@ button,
 }
 `;
 
+const AppWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 1.25em 1em 3.75em;
+`;
 
 export {
   GlobalStyle,
+  AppWrapper,
 };

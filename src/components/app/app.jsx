@@ -1,20 +1,15 @@
+import Content from "components/content/content";
+import Footer from "components/footer/footer";
+import Header from "components/header/header";
+import * as S from "./app.style";
+
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <S.AppWrapper>
+      <Header />
+      <Content />
+      <Footer />
+    </S.AppWrapper>
   );
 }
 
