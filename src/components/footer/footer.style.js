@@ -21,6 +21,10 @@ const linkBasicStyle = css`
   ${interactiveLink};
 `;
 
+const FooterWrapper = styled.div`
+  width: 18em;
+`;
+
 const SubTitle = styled.h3`
   margin: 0 0 1.25em;
   padding: 0;
@@ -130,6 +134,7 @@ const UserPolicy = styled.a`
 `;
 
 export {
+  FooterWrapper,
   SubTitle,
   FooterSimpleList,
   SimpleListItem,

@@ -48,7 +48,7 @@ const MENU_ITEMS =  [
 
 const Footer = () => {
   return(
-    <div>
+    <S.FooterWrapper>
       <S.SubTitle>О компании</S.SubTitle>
       <S.FooterSimpleList>
         <S.SimpleListItem>
@@ -100,7 +100,7 @@ const Footer = () => {
 
       <S.CopyRight>©WELBEX 2022. Все права защищены.</S.CopyRight>
       <S.UserPolicy href="#">Политика конфиденциальности</S.UserPolicy>
-    </div>
+    </S.FooterWrapper>
   );
 };
 
