@@ -29,13 +29,45 @@ const HeaderWrapper = styled.div`
   margin-bottom: 1.25em;
 
   @media (min-width: 1440px) {
+    position: relative;
     display: grid;
     gap: 1em 1.875em;
     grid-template-columns: repeat(12, 1fr);
     justify-content: flex-start;
 
-    width: 100%;
+    width: 71.25em;
     margin-bottom: 5.625em;
+
+    ::before {
+      content: '';
+      position: absolute;
+      top: 4.875em;
+      left: 25.625em;
+      transform: translate(-50%, -50%);
+      width: 5.25em;
+      height: 5.25em;
+
+      border-radius: 50%;
+      background: radial-gradient(64% 64% at 27.25% 26.5%, rgba(255, 208, 208, 0.536) 0%, rgba(212, 93, 93, 0.264) 59.67%, rgba(167, 49, 49, 0.248) 78.59%, rgba(130, 25, 25, 0.248) 100%);
+      box-shadow: 3px 6px 27px -10px rgba(223, 125, 125, 0.25);
+      backdrop-filter: blur(2px);
+    }
+
+    ::after {
+      content: '';
+      position: absolute;
+      top: -1.125em;
+      left: 46.75em;
+      transform: translate(-50%, -50%);
+      width: 3.75em;
+      height: 3.75em;
+
+      border-radius: 50%;
+      background: radial-gradient(64% 64% at 27.25% 26.5%, rgba(236, 208, 255, 0.64) 0%, rgba(161, 93, 207, 0.24) 59.67%, rgba(118, 49, 164, 0.208) 78.59%, rgba(86, 24, 128, 0.232) 100%);
+      box-shadow: 3px 6px 27px -10px rgba(177, 118, 217, 0.25);
+      filter: blur(5px);
+      backdrop-filter: blur(2px);
+    }
   }
 `;
 
@@ -46,6 +78,8 @@ const HeaderNavigation = styled.nav`
     width: 34.7em;
     grid-column: 3 / span 6;
     grid-row: 1/-1;
+
+    z-index: 100;
   }
 `;
 

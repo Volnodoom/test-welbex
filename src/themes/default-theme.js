@@ -11,5 +11,6 @@ export const defaultTheme = {
     gradientEnd1: '#FF3F78',
     gradientStart2: '#FCB045',
     gradientEnd2: '#FD1D1D',
+    flame: '#961A1A',
   }
 };

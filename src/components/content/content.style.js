@@ -10,7 +10,7 @@ const ContentWrapper = styled.section`
   @media (min-width: 1440px) {
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    width: 71.25em;
     padding: 0;
     margin-bottom: 7.75em;
   }
@@ -26,7 +26,15 @@ const ContentWrapper = styled.section`
     background-repeat: no-repeat;
 
     @media (min-width: 1440px) {
-      display: none;
+      inset: 22em auto auto 44.75em;
+      width: 1.75em;
+      height: 1.75em;
+      border-radius: 50%;
+
+      background: radial-gradient(64% 64% at 27.25% 26.5%, rgba(255, 208, 208, 0.48) 0%, rgba(212, 93, 93, 0.248) 59.67%, rgba(167, 49, 49, 0.264) 78.59%, rgba(130, 25, 25, 0.232) 100%);
+      box-shadow: 3px 6px 27px -10px rgba(223, 125, 125, 0.25);
+      filter: blur(2.5px);
+      backdrop-filter: blur(2px);
     }
   }
 `;
@@ -43,6 +51,21 @@ const ContentTitle = styled.h1`
   @media (min-width: 1440px) {
     margin: 0 0 0.625em;
     font-size: 3rem;
+
+    ::before {
+      content: '';
+      position: absolute;
+      width: 6.5em;
+      height: 6.5em;
+
+      border-radius: 50%;
+      background-color: ${({theme}) => theme.color.flame};
+      opacity: 0.25;
+      filter: blur(4em);
+      top: 4.125em;
+      left: 1.96em;
+      transform: translate(-100%, -50%);
+    }
   }
 `;
 
@@ -119,9 +142,8 @@ const ContentListDesktop = styled.ul`
   @media (min-width: 1440px) {
     display: flex;
     flex-wrap: wrap;
-    justify-content: end;
     gap: 1.875em;
-    margin: 0 0 3.75em;
+    margin: 0 0 3.75em auto;
     padding: 0;
     width: 19em;
 
@@ -151,13 +173,14 @@ const ContentItem = styled.li`
     position: absolute;
     width: 0.625em;
     height: 0.06em;
+    z-index: 200;
 
     content: '';
     top: 50%;
     left: 0;
     transform: translateY(-50%);
 
-    background-image: linear-gradient(to right, ${({theme}) => theme.color.gradientStart2}, ${({theme}) => theme.color.gradientEnd2});
+    background-image: linear-gradient(90deg, ${({theme}) => theme.color.gradientStart2}, ${({theme}) => theme.color.gradientEnd2});
 
     @media (min-width: 1440px) {
       display: none;

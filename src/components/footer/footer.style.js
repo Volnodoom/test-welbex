@@ -28,7 +28,7 @@ const FooterWrapper = styled.div`
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 2em 1.875em;
-    width: 100%;
+    width: 71.25em;
     margin-bottom: 1.25em;
   }
 `;
@@ -210,6 +210,7 @@ const UserPolicy = styled.a`
   font-size: 0.75rem;
   font-family: "Montserrat";
   text-decoration: underline;
+  text-underline-offset: 0.2em;
   ${interactiveLink};
 `;
 
