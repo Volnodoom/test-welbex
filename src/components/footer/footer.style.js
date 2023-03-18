@@ -23,6 +23,46 @@ const linkBasicStyle = css`
 
 const FooterWrapper = styled.div`
   width: 18em;
+
+  @media (min-width: 1440px) {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 2em 1.875em;
+    width: 100%;
+    margin-bottom: 1.25em;
+  }
+`;
+
+const CompanyWrapper = styled.div`
+
+@media (min-width: 1440px) {
+  grid-column: 1 / span 3;
+  grid-row: 1 / span 1;
+}
+`;
+
+const MenuWrapper = styled.div`
+  @media (min-width: 1440px) {
+    grid-column: 4 / span 5;
+    grid-row: 1 / span 1;
+  }
+`;
+
+const ContactsWrapper = styled.div`
+  @media (min-width: 1440px) {
+    grid-column: 9 / span 4;
+    grid-row: 1 / span 1;
+    text-align: end;
+  }
+`;
+
+const UserPoliceWrapper = styled.div`
+  @media (min-width: 1440px) {
+    grid-column: 1 / -1;
+    grid-row: 2 / span 1;
+
+    text-align: end;
+  }
 `;
 
 const SubTitle = styled.h3`
@@ -33,7 +73,11 @@ const SubTitle = styled.h3`
   text-transform: uppercase;
   font-weight: 700;
   font-size: 0.75rem;
-  letter-spacing: calc(0.75em * 0.05);
+  letter-spacing: calc(5 * 0.01em);
+
+  @media (min-width: 1440px) {
+    font-size: 0.875rem;
+  }
 `;
 
 const FooterSimpleList = styled.ul`
@@ -41,6 +85,10 @@ const FooterSimpleList = styled.ul`
   padding: 0;
 
   list-style: none;
+
+  @media (min-width: 1440px) {
+    margin: 0;
+  }
 `;
 
 const SimpleListItem = styled.li`
@@ -50,8 +98,12 @@ const SimpleListItem = styled.li`
 `;
 
 const ItemLink = styled.a`
-  font-size: 0.875rem;
   ${linkBasicStyle}
+  font-size: 0.875rem;
+
+  @media (min-width: 1440px) {
+    font-size: 1rem;
+  }
 `;
 
 const FooterGridList = styled.ul`
@@ -62,8 +114,14 @@ const FooterGridList = styled.ul`
   padding: 0 1.56em 0 0;
   width: 18em;
 
-
   list-style: none;
+
+  @media (min-width: 1440px) {
+    grid-template-columns: 2fr 3fr;
+    gap: 0.625em 1.875em;
+    padding: 0;
+    width: auto;
+  }
 `;
 
 const FooterContactsList = styled.ul`
@@ -78,6 +136,24 @@ const FooterContactsList = styled.ul`
   width: 18em;
 
   list-style: none;
+
+  @media (min-width: 1440px) {
+    gap: 1.25em 0.625em;
+    margin: 0 0 0 auto;
+    grid-template-areas:
+    "phone phone phone phone phone"
+    " . . telega viber whats"
+    "address address address address address";
+  }
+`;
+
+const ContactItemLink = styled.a`
+  @media (min-width: 1440px) {
+    svg {
+      width: 1.25em;
+      height: 1.25em;
+    }
+  }
 `;
 
 const PhoneItem = styled.li`
@@ -116,6 +192,10 @@ const WhatsItem = styled.li`
 const AddressItem = styled.li`
   grid-area: address;
   font-size: 0.875rem;
+
+  @media (min-width: 1440px) {
+    font-size: 1rem;
+  }
 `;
 
 const CopyRight = styled.p`
@@ -148,4 +228,9 @@ export {
   AddressItem,
   CopyRight,
   UserPolicy,
+  CompanyWrapper,
+  MenuWrapper,
+  ContactsWrapper,
+  UserPoliceWrapper,
+  ContactItemLink,
 }

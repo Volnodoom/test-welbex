@@ -10,7 +10,7 @@ const ContentWrapper = styled.section`
   @media (min-width: 1440px) {
     display: flex;
     justify-content: space-between;
-    width: 90em;
+    width: 100%;
     padding: 0;
     margin-bottom: 7.75em;
   }
@@ -176,6 +176,7 @@ const ContentSubItem = styled.span`
 
 const ContentConsultationButton = styled.button`
   display: none;
+  cursor: pointer;
 
   @media (min-width: 1440px) {
     display: block;
@@ -191,7 +192,7 @@ const ContentConsultationButton = styled.button`
     }
 
     :active {
-      color: ${({theme}) => theme.color.whiteActive};
+      color: ${({theme}) => theme.color.grey};
       background-color: ${({theme}) => theme.color.blueActive};
     }
 

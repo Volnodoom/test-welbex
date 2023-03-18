@@ -29,7 +29,7 @@ const Content = () => {
           <S.ContentItem>35 дней<S.ContentSubItem>использования CRM</S.ContentSubItem></S.ContentItem>
         </S.ContentListDesktop>
 
-        <S.ContentConsultationButton>Получить консультацию</S.ContentConsultationButton>
+        <S.ContentConsultationButton type="button">Получить консультацию</S.ContentConsultationButton>
       </S.SubContentWrapper>
     </S.ContentWrapper>
   );
