@@ -187,6 +187,10 @@ const AppWrapper = styled.div`
   align-items: center;
 
   padding: 1.25em 1em 3.75em;
+
+  @media (min-width: 1440px) {
+    padding: 2.875em 9.375em 1.25em;
+  }
 `;
 
 export {

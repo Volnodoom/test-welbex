@@ -35,7 +35,7 @@ const HeaderWrapper = styled.div`
     justify-content: flex-start;
 
     width: 90em;
-    padding: 0 9.375em;
+    margin-bottom: 5.625em;
   }
 `;
 
